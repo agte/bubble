@@ -1,0 +1,52 @@
+{
+  "name": "@agte/bubble",
+  "version": "0.0.1",
+  "description": "Bubble sorting example with animations",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint",
+    "format": "eslint --fix",
+    "start": "static-server -p 9000 -i index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agte/bubble.git"
+  },
+  "keywords": [
+    "sorting",
+    "bubble"
+  ],
+  "author": "Anna Agte <matiasrustagte@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agte/bubble/issues"
+  },
+  "homepage": "https://github.com/agte/bubble#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "static-server": "^2.2.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "es2020": true,
+      "browser": true
+    },
+    "extends": "airbnb-base",
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parser": "babel-eslint",
+    "rules": {
+      "import/extensions": [
+        "error",
+        "ignorePackages"
+      ],
+      "no-useless-rename": 0
+    }
+  }
+}

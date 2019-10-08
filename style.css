@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+sorting-kettle {
+  display: block;
+  width: 52px;
+  position: relative;
+}
+
+sorting-bubble {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: solid 1px #0084ff;
+  border-radius: 26px;
+  background: #a9d4fc;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  color: #660;
+  transition: background 0.3s, color 0.3s;
+}
+
+sorting-bubble:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 10px 4px 10px 4px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  background: rgba(255,255,255,0.5);
+}
+
+sorting-bubble[active] {
+  background: #a9f0fc;
+  color: #aa6;
+  transition: background 0.3s, color 0.3s;
+}
+
+sorting-bubble[active]:before {
+  background: rgba(255,255,255,0.7);
+}
+
+sorting-bubble[sorted] {
+  opacity: 0.5;
+}
+
+#stove {
+  width: 52px;
+  margin: 20px auto;
+}
+
+#bar {
+  margin: 50px auto;
+  padding: 1em;
+  width: 20%;
+  height: 500px;
+}
+
+#handle {
+  display: block;
+  margin: 0 auto;
+  font-size: 125%;
+  padding: 0.25em 0.75em;
+  background: #a9d4fc;
+  border: none 0;
+  border-radius: 4px;
+  color: dark-brown;
+  outline: none;
+  opacity: 0.8;
+}
+
+#handle:hover {
+  opacity: 1;
+}
+
+#range-label {
+  display: block;
+  margin-top: 2em;
+  text-align: center;
+}
+#range {
+  width: 100%;
+}

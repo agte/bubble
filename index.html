@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8'>
+  <title>Пузырёк</title>
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+  <div id='stove'></div>
+  <div id='bar'>
+    <button id='handle'>Начать</button>
+    <label id='range-label' for='range'>Длительность анимации</label>
+    <input id='range' type='range' value=250 min=50 max=1000 step=50>
+  </div>
+
+  <script type='module'>
+    import Kettle from './Kettle.js';
+
+    handle.addEventListener('click', async (event) => {
+      event.stopPropagation();
+      bar.hidden = true;
+
+      const kettle = new Kettle({
+        delay: Number(range.value),
+      });
+      stove.appendChild(kettle);
+      await kettle.boil();
+      kettle.remove();
+
+      bar.hidden = false;
+    }, false);
+  </script>
+</body>
+</html>
