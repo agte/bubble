@@ -1,12 +1,12 @@
 {
   "name": "@agte/bubble",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bubble sorting example with animations",
   "main": "index.html",
   "scripts": {
     "lint": "eslint",
     "format": "eslint --fix",
-    "start": "static-server -p 9000 -i index.html",
+    "start": "cd ./src && static-server -p 9000 -i index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
