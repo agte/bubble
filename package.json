@@ -1,12 +1,12 @@
 {
   "name": "@agte/bubble",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bubble sorting example with animations",
   "main": "index.html",
   "scripts": {
     "lint": "eslint",
     "format": "eslint --fix",
-    "start": "static-server -p 9000 -i index.html",
+    "start": "static-server -p ${PORT:-3000} -i index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,8 +27,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "static-server": "^2.2.1"
+    "eslint-plugin-import": "^2.18.2"
   },
   "eslintConfig": {
     "env": {
@@ -48,5 +47,8 @@
       ],
       "no-useless-rename": 0
     }
+  },
+  "dependencies": {
+    "static-server": "^2.2.1"
   }
 }
