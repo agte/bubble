@@ -72,7 +72,7 @@ export default class SortingKettle extends HTMLElement {
             B.up(this.#delay * 2),
           ]);
           // Фиксируем перемещение в DOM-дереве.
-          A.parentNode.insertBefore(A, B);
+          A.parentNode.insertBefore(B, A);
         }
 
         // Выключаем подсветку пузырьков.
